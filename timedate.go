@@ -28,3 +28,11 @@ func GetAnydayYMD(sep string, any int) string {
 		return strings.Replace(anydayYMD, "-", sep, -1)
 	}
 }
+
+// GetTodayYM 得到以sep为分隔符的年、月字符串(今天)
+func GetTodayYM(sep string) string {
+	now := time.Now()
+	todayYM := now.Format("2006-01")
+
+	return strings.Replace(todayYM, "-", sep, -1)
+}
